@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+}
+
+button:focus, input:focus, textarea:focus {
+	outline: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background: #141516;
+	color: #ffffff;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+}
+
+main {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.aside-image {
+    width: 120px; /* Tamaño de la imagen */
+    height: 120px;
+    border-radius: 50%; /* Imagen circular */
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.aside-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+	justify-content: center;
+}
+
+main aside {
+    width: 260px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: #212529;
+}
+
+main aside ul {
+	list-style: none;
+	width: 100%;
+	margin-top: 3rem;
+	padding: 0 4rem;
+}
+
+main aside ul li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 4rem;
+	transition: .3s;
+	cursor: pointer;
+}
+
+main aside ul li:hover {
+	color: #1e63ad;
+}
+
+main aside ul li p {
+	margin: 0;
+}
+
+main aside ul li i {
+	margin-right: 1.5rem;
+	font-size: 2.5rem;
+	width: 3rem;
+}
+
+.activeLink {
+	color: #1e63ad;
+}
+
+.socialIcons {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: #ddd;
+	text-decoration: none;
+	color: #333;
+	font-size: 18px;
+	transition: background 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+	background-color: #1e63ad;
+	color: white;
+}
+
+.main_wrapper {
+	width: 100%;
+	overflow: hidden;
+	padding-right: 3rem;
+}
+
+.main_wrapper .swiper {
+	padding: 30px;
+	height: 100%;
+}
+
+.home_content {
+    display: flex;
+    align-items: center;
+    margin-top: 18rem;
+}
+
+.head_text1 {
+	font-size: 4rem;
+	font-weight: 700;
+}
+
+.head_text1 span {
+	color: #1e63ad;
+}
+
+.head_text2 {
+	font-size: 3rem;
+	font-weight: 600;
+	padding-bottom: 2rem;
+}
+
+.head_text2 span {
+	color: #1e63ad;
+}
+
+.home_content .home_text {
+    width: 70%;
+}
+
+.home_content .home_img {
+	width: 30%;
+	
+}
+
+.home_content .home_img img {
+	width: 255px;
+	height: 255px;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 0 20px #1e63ad, 0 0 40px #0d2948;
+	animation: glow-border 1.5s infinite alternate;
+}
+
+.home_content p {
+	padding-bottom: 2rem;
+}
+
+.home_content .custom_btn {
+	margin-right: 1rem;
+}
+
+.custom_btn {
+	height: 4.5rem;
+	border-radius: 0.5rem;
+	padding: 0.4rem 2rem;
+	background: #1e63ad;
+	color: #ffffff;
+	display: inline-flex;
+	align-items: center;
+}
+
+.custom_btn:hover {
+	text-decoration: none;
+	background: #4b99bd;
+	color: #ffffff;
+}
+
+.about_content {
+    margin-top: 5rem;
+}
+
+.about_row {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-top: 4rem;
+}
+
+.about_row .about_col {
+	width: 33.3333%;
+}
+
+.about_border {
+	position: relative;
+	padding-bottom: 1rem;
+	margin-top: 1rem;
+}
+
+.about_border::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1rem;
+	background: linear-gradient(to left, transparent, #ffffff77, transparent);
+}
+
+.about_border p {
+	color: #1e63ad;
+	display: flex;
+	align-items: center;
+	margin: 0;
+}
+
+.about_border p span {
+	color: #ffffff !important;
+	margin-left: 1rem;
+}
+
+.about_progress_box .progress {
+    background-color: #272727;
+    border-radius: 0.5rem;
+}
+
+.about_progress_box .progress_item {
+	margin-top: 0.3rem;
+}
+
+.about_progress_box .progress_item p {
+	color: #1e63ad;
+}
+
+.about_progress_box .progress_item  .progress-bar {
+    background-color: #1e63ad;
+}
+
+.service_row {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.service_col {
+	width: 33.33333%;
+	padding: 1rem;
+}
+
+.service_item {
+	text-align: center;
+	padding: 2.5rem;
+	background: rgba(0, 0, 0, 0.437);
+	border-radius: 0.4rem;
+	transition: .3s;
+}
+
+.service_item:hover {
+	transform: scale(1.1);
+	background: rgba(18, 18, 18, 0.437);
+}
+
+.service_item i {
+	font-size: 3.4rem;
+	color: #1e63ad;
+	margin-bottom: 1rem;
+}
+
+.service_item h3 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1.5rem 0;
+    font-weight: 700;
+}
+
+.service_item p {
+	font-size: 1.3rem;
+}
+
+.service_content {
+    margin-top: 0rem;
+}
+
+/* GRID DE 3 COLUMNAS */
+.gallery_grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+	gap: 20px;
+	justify-items: center;
+	padding: 20px;
+}
+
+/* TARJETAS DE PROYECTOS */
+.gallery_col {
+	position: relative;
+	width: 320px; /* Tamaño original de las tarjetas */
+	height: 250px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery_col img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+/* EFECTO HOVER */
+.gallery_col:hover img {
+	transform: scale(1.1);
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.gallery_col:hover .overlay {
+	opacity: 1;
+}
+
+.overlay i {
+	color: white;
+	font-size: 24px;
+}
+
+.contact_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espacio entre los íconos */
+    margin-bottom: 20px;
+}
+
+.contact_icon {
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Para el efecto hover */
+}
+
+.contact_icon i {
+    font-size: 30px; /* Tamaño de los íconos */
+    color: white; /* Color inicial */
+    margin-bottom: 10px; /* Espacio entre el ícono y el texto */
+    transition: color 0.3s ease; /* Para suavizar el cambio de color */
+}
+
+.contact_icon span {
+    display: block;
+    color: white; /* Color inicial del texto */
+    font-size: 16px;
+}
+
+/* Estilo para el enlace */
+.contact_icon a {
+    color: white; /* Color del enlace */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.contact_icon:hover i,
+.contact_icon:hover span,
+.contact_icon:hover a {
+    color: #007bff; /* Color azul en hover */
+    transform: scale(1.1); /* Efecto de aumentar el ícono y el texto */
+}
+
+/* Estilo de los campos del formulario */
+.contact_item input, .contact_item textarea {
+	width: 100%;
+	padding: 12px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #333;
+	color: white;
+	font-size: 16px;
+}
+
+.contact_item input:focus, .contact_item textarea:focus {
+	border-color: #3498db;
+	outline: none;
+}
+
+.error-message {
+	color: red;
+	font-size: 12px;
+}
+
+/* Estilo del botón */
+#sendBtn {
+	width: 100%;
+	padding: 14px;
+	background-color: #3498db;
+	color: white;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+#sendBtn:hover {
+	background-color: #2980b9;
+}
+
+/* Estilo de la sección de contacto */
+.contact_content {
+	padding: 20px;
+	background-color: #333;
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.head_text1 span {
+	color: #3498db;
+}
+
+.swiper-cube .swiper-cube-shadow {
+	display: none;
+}
+
+
+
+/* RESPONSIVE PARA PANTALLAS PEQUEÑAS */
+
+
+@media (max-width: 900px) {
+	.gallery_grid {
+		grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablet */
+	}
+}
+
+@media (max-width: 600px) {
+	.gallery_grid {
+		grid-template-columns: repeat(1, 1fr); /* Una columna en móvil */
+	}
+}
+
